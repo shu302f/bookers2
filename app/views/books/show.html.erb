@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 <div class="container">
   <div class="row">
-    <%= render 'sidebar', book: Book.new %>
+    <%= render 'sidebar', book: Book.new, user: @user %>
     <div class="col-md-8 offset-md-1">
   		<h2>Book detail</h2>
   		<table class="table">
