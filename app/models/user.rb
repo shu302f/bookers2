@@ -15,6 +15,7 @@ class User < ApplicationRecord
     image.variant(resize_to_limit: [width, height]).processed
   end
 
-  validates :name, length: { minimum: 2, message: 'is too short (minimum is 2 characters)' }
+  validates :name, uniqueness: true, length: { in: 2..20 }
+  validates :introduction, length: { maximum: 50 }
 
 end
